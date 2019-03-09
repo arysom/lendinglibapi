@@ -4,3 +4,16 @@ Homestead.json
 Homestead.yaml
 .env
 /storage/app/*
+/vendor/
+
+# Laravel 4 specific
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
