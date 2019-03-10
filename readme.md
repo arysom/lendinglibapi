@@ -18,9 +18,9 @@ Simple lending lib project php api made with Lumen - the Laravel framework's spi
 
 ## Todo
 
-[] Postman collection
-[] Tests
-[] Cleanup
+- [ ] Postman collection
+- [ ] Tests
+- [ ] Cleanup
 
 ## License
 
