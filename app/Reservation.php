@@ -19,12 +19,12 @@ class Reservation extends Model
 
     public function user()
     {
-        $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function thing()
     {
-        $this->belongsTo('App\Thing');
+        return $this->belongsTo('App\Thing');
     }
 
 }

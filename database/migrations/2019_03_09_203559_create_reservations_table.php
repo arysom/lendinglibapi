@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->integer('thing_id');
             $table->dateTime('start');
             $table->dateTime('end');
-            $table->enum('status', ['proposed', 'canceled', 'accepted', 'rejected']);
+            $table->enum('status', ['proposed', 'cancelled', 'accepted', 'rejected']);
             $table->timestamps();
         });
     }

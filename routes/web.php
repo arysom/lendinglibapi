@@ -16,14 +16,19 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/login', 'LoginController@login');
+$router->post('/register', 'RegisterController@insert');
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
 
     $router->get('/things', 'ThingController@index');
-    $router->get('/things/{id}', 'ThingController@get');
     $router->post('/things', 'ThingController@insert');
+    $router->get('/things/{id}', 'ThingController@get');
     $router->put('/things/{id}', 'ThingController@update');
     $router->delete('/things/{id}', 'ThingController@delete');
+
+    $router->post('reservations/{thing_id}', 'ReservationController@insert');
+    $router->put('reservations/{id}', 'ReservationController@update');
+
 
 
 });
