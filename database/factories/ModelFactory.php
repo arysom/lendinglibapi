@@ -15,5 +15,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
+        'password' => str_random(30)
+    ];
+});
+
+$factory->define(App\Thing::class, function (Faker\Generator $faker,$id) {
+    return [
+        'name' => $faker->name,
+        'user_id' => $id,
+        'desc' => $faker->sentence(),
+        'filename' => $faker->imageUrl($width = 640, $height = 480)
     ];
 });
